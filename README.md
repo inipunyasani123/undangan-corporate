@@ -2,7 +2,7 @@
 
 Situs konferensi, bukan undangan bersampul: navbar sticky, hero dengan hitung mundur, agenda dua hari bertab, pembicara, slot logo sponsor per tingkat, venue, dan formulir pendaftaran.
 
-**Demo live:** https://undangan-corporate-delta.vercel.app
+**Demo live:** https://undangan-corporate.pintuweb.id
 
 ![Tangkapan layar](public/og.jpg)
 

@@ -18,7 +18,7 @@ const body = Inter({
 const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Temu Rekayasa Nusa 2027 — situs acara contoh","description":"Contoh situs acara korporat: agenda dua hari, pembicara, slot sponsor, lokasi, dan pendaftaran peserta.","inLanguage":"id"};
 
 export const metadata = {
-  metadataBase: new URL("https://undangan-corporate-delta.vercel.app"),
+  metadataBase: new URL("https://undangan-corporate.pintuweb.id"),
   title: "Situs Acara Korporat Digital — Temu Rekayasa Nusa 2027",
   description: "Undangan acara korporat & konferensi digital profesional. Agenda, pembicara, lokasi, dan registrasi peserta dalam satu halaman modern.",
   applicationName: "Undangan Digital",
@@ -26,11 +26,11 @@ export const metadata = {
   authors: [{ name: "Undangan Digital" }],
   creator: "Undangan Digital",
   publisher: "Undangan Digital",
-  alternates: { canonical: "https://undangan-corporate-delta.vercel.app" },
+  alternates: { canonical: "https://undangan-corporate.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://undangan-corporate-delta.vercel.app",
+    url: "https://undangan-corporate.pintuweb.id",
     siteName: "Undangan Digital",
     title: "Situs Acara Korporat Digital — Temu Rekayasa Nusa 2027",
     description: "Undangan acara korporat & konferensi digital profesional. Agenda, pembicara, lokasi, dan registrasi peserta dalam satu halaman modern.",

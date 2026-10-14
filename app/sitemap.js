@@ -1,5 +1,5 @@
 export default function sitemap() {
   return [
-    { url: "https://undangan-corporate-delta.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
+    { url: "https://undangan-corporate.pintuweb.id", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
   ];
 }
