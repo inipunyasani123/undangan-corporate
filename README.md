@@ -6,7 +6,7 @@ Situs konferensi, bukan undangan bersampul: navbar sticky, hero dengan hitung mu
 
 ![Tangkapan layar](public/og.jpg)
 
-> Contoh dengan data fiktif: nama, tempat, dan nomor rekening tidak sungguhan. Formulir hanya demo dan mengatakannya terus terang. Foto adalah placeholder berlabel yang siap diganti.
+> Contoh dengan data fiktif: nama, tempat, dan nomor rekening tidak sungguhan. Formulir hanya demo dan mengatakannya terus terang. Potret pembicara adalah ilustrasi buatan sendiri dan foto aula berlisensi CC0; keduanya siap diganti.
 
 ## Fitur
 
@@ -26,7 +26,8 @@ Seluruh isi ada di satu file: `lib/data.js` (nama, tanggal, acara, galeri, musik
 
 ## Gambar & kredit
 
-- `public/images/*.webp` — placeholder berlabel buatan sendiri (bukan foto stok), digambar ulang dari SVG agar tidak bergantung pada layanan luar.
+- `public/images/pembicara-*.webp` — potret ilustrasi buatan sendiri (tokoh fiktif), digambar dari SVG.
+- `public/images/venue-aula.webp` — foto CC0; judul, pembuat, dan sumbernya di `public/images/SUMBER.md`.
 
 
 ## Teknologi

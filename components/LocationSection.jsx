@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { MapPin, Navigation } from 'lucide-react';
 import Reveal from './ui/Reveal';
 import config from '@/lib/data';
@@ -20,6 +21,14 @@ export default function LocationSection() {
               <Navigation size={16} aria-hidden="true" /> Petunjuk Arah
             </a>
           </div>
+          {location.photo && (
+            <figure className="mt-8">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-blush bg-blush/60 shadow-sm">
+                <Image src={location.photo} alt={location.photoAlt} fill sizes="(max-width:768px) 100vw, 480px" className="object-cover" />
+              </div>
+              <figcaption className="mt-2 text-xs text-muted">Foto contoh suasana aula</figcaption>
+            </figure>
+          )}
         </Reveal>
 
         <Reveal delay={0.15}>

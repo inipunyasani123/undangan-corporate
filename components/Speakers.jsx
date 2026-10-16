@@ -18,7 +18,7 @@ export default function Speakers() {
             <Reveal key={s.name} delay={(i % 3) * 0.08}>
               <div className="group overflow-hidden rounded-2xl border border-blush bg-cream shadow-sm transition hover:shadow-md">
                 <div className="relative aspect-square w-full overflow-hidden">
-                  <Image src={s.photo} alt={`Foto ${s.name}`} fill sizes="(max-width:768px) 50vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
+                  <Image src={s.photo} alt={`Potret ilustrasi ${s.name}`} fill sizes="(max-width:768px) 50vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="font-display font-bold text-ink">{s.name}</h3>
