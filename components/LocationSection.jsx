@@ -23,11 +23,14 @@ export default function LocationSection() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="overflow-hidden rounded-2xl border border-blush shadow-sm">
+          <div className="relative overflow-hidden rounded-2xl border border-blush bg-blush/60 shadow-sm">
+            <p className="absolute inset-0 flex items-center justify-center gap-2 text-sm text-muted" aria-hidden="true">
+              <MapPin size={16} /> Memuat peta…
+            </p>
             <iframe
               src={location.mapEmbed}
               title="Peta lokasi acara"
-              className="h-72 w-full border-0"
+              className="relative h-72 w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen

@@ -4,7 +4,6 @@ import config from '@/lib/data';
 // Footer korporat: brand, kontak, sosial, copyright.
 export default function Footer() {
   const { brand, footer, nav } = config;
-  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-ink px-5 py-14 text-cream">
@@ -17,16 +16,16 @@ export default function Footer() {
 
           <div>
             <p className="text-sm font-semibold text-cream/80">Navigasi</p>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-2 space-y-1">
               {nav.map((n) => (
-                <li key={n.href}><a href={n.href} className="text-sm text-cream/75 transition hover:text-gold">{n.label}</a></li>
+                <li key={n.href}><a href={n.href} className="inline-block py-1 text-sm text-cream/75 transition hover:text-gold">{n.label}</a></li>
               ))}
             </ul>
           </div>
 
           <div>
             <p className="text-sm font-semibold text-cream/80">Kontak</p>
-            <a href={`mailto:${footer.email}`} className="mt-3 inline-flex items-center gap-2 text-sm text-cream/75 transition hover:text-gold">
+            <a href={`mailto:${footer.email}`} className="mt-2 inline-flex items-center gap-2 py-2 text-sm text-cream/75 transition hover:text-gold">
               <Mail size={14} aria-hidden="true" /> {footer.email}
             </a>
             <p className="mt-4 max-w-xs text-xs text-cream/70">{footer.note}</p>
@@ -34,7 +33,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-cream/10 pt-6 text-center text-xs text-cream/70">
-          © {year} {footer.org}. All rights reserved.
+          © 2027 {footer.org}. Hak cipta dilindungi.
         </div>
       </div>
     </footer>

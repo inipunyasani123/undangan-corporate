@@ -44,11 +44,32 @@ section[id] { scroll-margin-top: 5rem; }
 ::-webkit-scrollbar-track { background: var(--color-blush); }
 ::-webkit-scrollbar-thumb { background: var(--color-rose); border-radius: 9999px; }
 
+/* Muncul saat masuk layar (komponen Reveal): transisi CSS, tanpa pustaka animasi. */
+.muncul {
+  opacity: 0;
+  transform: translateY(var(--muncul-y, 24px));
+  transition: opacity 0.6s ease-out var(--muncul-tunda, 0s), transform 0.6s ease-out var(--muncul-tunda, 0s);
+}
+.muncul.terlihat { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .muncul { opacity: 1; transform: none; }
+}
+
+/* Animasi masuk hero memakai CSS: jalan sejak cat pertama tanpa menunggu JavaScript,
+   jadi judul acara (elemen LCP) tidak tertahan opacity 0 sampai halaman terhidrasi. */
+@keyframes masuk { from { opacity: 0; transform: translateY(14px); } }
+@keyframes masuk-skala { from { transform: scale(0.97); } }
+.masuk { animation: masuk 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--tunda, 0s); }
+.masuk-skala { animation: masuk-skala 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
 :focus-visible { outline: 2px solid var(--color-rose); outline-offset: 2px; border-radius: 4px; }
+/* Target fokus terprogram (bukan kontrol, tidak bisa dicapai lewat Tab) tidak perlu cincin. */
+[tabindex="-1"]:focus-visible { outline: none; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;

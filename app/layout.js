@@ -15,7 +15,7 @@ const body = Inter({
   display: 'swap',
 });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Temu Rekayasa Nusa 2027 — situs acara contoh","description":"Contoh situs acara korporat: agenda dua hari, pembicara, slot sponsor, lokasi, dan pendaftaran peserta.","inLanguage":"id"};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Temu Rekayasa Nusa 2027 — situs acara contoh","url":"https://undangan-corporate.pintuweb.id","description":"Contoh situs acara korporat: agenda dua hari, pembicara, slot sponsor, lokasi, dan pendaftaran peserta.","inLanguage":"id"};
 
 export const metadata = {
   metadataBase: new URL("https://undangan-corporate.pintuweb.id"),
@@ -58,7 +58,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id" className={`${display.variable} ${body.variable}`}>
-      <body className="antialiased">{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+      <body className="antialiased">
+        <noscript><style>{'.muncul{opacity:1;transform:none}'}</style></noscript>
+        {children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
         <aside aria-label="Tentang situs demo ini" style={{ display: 'block', margin: 0, padding: '12px 16px', background: '#0f1b33', color: '#dfe6f3', font: '400 13px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', textAlign: 'center' }}>
           Situs demo buatan PintuWeb — nama dan isinya rekaan.{' '}
           <a href="https://www.pintuweb.id/kontak?demo=corporate" style={{ color: '#ffffff', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>Buat yang seperti ini →</a>

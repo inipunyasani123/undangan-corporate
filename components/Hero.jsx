@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import { CalendarDays, MapPin, ArrowRight, CalendarPlus } from 'lucide-react';
 import config from '@/lib/data';
 import { useCountdown } from '@/lib/hooks';
@@ -23,19 +22,13 @@ export default function Hero() {
   return (
     <section id="top" className="hero-grid relative overflow-hidden bg-rose-deep px-5 pb-20 pt-32 text-cream md:pt-40">
       <div className="mx-auto max-w-4xl text-center">
-        <motion.span
-          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          className="inline-block rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-gold"
-        >
+        <p className="masuk font-display text-xs font-semibold uppercase tracking-[0.22em] text-gold">
           {hero.badge}
-        </motion.span>
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.7 }}
-          className="mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl"
-        >
+        <h1 className="masuk-skala mt-5 text-balance font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
           {hero.title}
-        </motion.h1>
+        </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base text-cream/80 md:text-lg">{hero.subtitle}</p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-cream/90">

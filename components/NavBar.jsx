@@ -23,14 +23,14 @@ export default function NavBar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#top" className={`font-display text-lg font-bold transition-colors ${scrolled ? 'text-rose-deep' : 'text-cream'}`}>
+        <a href="#top" className={`py-2 font-display text-lg font-bold transition-colors ${scrolled || open ? 'text-rose-deep' : 'text-cream'}`}>
           {brand.name}<span className="text-gold">.</span>
         </a>
 
         {/* Desktop */}
         <div className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (
-            <a key={n.href} href={n.href} className={`text-sm font-medium transition ${scrolled ? 'text-muted hover:text-rose' : 'text-cream/85 hover:text-cream'}`}>
+            <a key={n.href} href={n.href} className={`py-2 text-sm font-medium transition ${scrolled ? 'text-muted hover:text-rose' : 'text-cream/85 hover:text-cream'}`}>
               {n.label}
             </a>
           ))}
@@ -40,14 +40,14 @@ export default function NavBar() {
         </div>
 
         {/* Mobile toggle */}
-        <button className={`md:hidden ${scrolled || open ? 'text-ink' : 'text-cream'}`} onClick={() => setOpen((v) => !v)} aria-label={open ? 'Tutup menu' : 'Buka menu'} aria-expanded={open}>
+        <button type="button" className={`-mr-2.5 flex h-11 w-11 items-center justify-center md:hidden ${scrolled || open ? 'text-ink' : 'text-cream'}`} onClick={() => setOpen((v) => !v)} aria-label="Menu" aria-expanded={open} aria-controls="menu-ponsel">
           {open ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </nav>
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-blush bg-cream px-5 py-4 md:hidden">
+        <div id="menu-ponsel" className="border-t border-blush bg-cream px-5 py-4 md:hidden">
           <div className="flex flex-col gap-1">
             {nav.map((n) => (
               <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:bg-blush">

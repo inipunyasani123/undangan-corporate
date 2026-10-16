@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Halaman tidak ditemukan', robots: { index: false } };
+export const metadata = { title: 'Halaman tidak ditemukan — Temu Rekayasa Nusa 2027', robots: { index: false }, alternates: { canonical: null } };
 
 export default function NotFound() {
   return (
