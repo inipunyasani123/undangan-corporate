@@ -1,6 +1,6 @@
 # Situs Acara — Temu Rekayasa Nusa 2027
 
-Situs konferensi, bukan undangan bersampul: navbar sticky, hero dengan hitung mundur, agenda dua hari bertab, pembicara, slot logo sponsor per tingkat, venue, dan formulir pendaftaran.
+Situs konferensi, bukan undangan bersampul: navbar sticky, hero dengan hitung mundur, agenda dua hari bertab, pembicara, sponsor per tingkat (wordmark teks bernama fiktif), venue, dan formulir pendaftaran.
 
 **Demo live:** https://undangan-corporate.pintuweb.id
 
@@ -12,7 +12,7 @@ Situs konferensi, bukan undangan bersampul: navbar sticky, hero dengan hitung mu
 
 - Agenda dua hari (tab yang bisa dioperasikan papan ketik)
 - Statistik dihitung otomatis dari agenda & pembicara
-- Pembicara, slot sponsor berlabel, lokasi
+- Pembicara, sponsor per tingkat (nama fiktif), lokasi
 - Pendaftaran peserta — mode demo, terus terang tidak memproses data
 - Halaman 404 bergaya sendiri
 
